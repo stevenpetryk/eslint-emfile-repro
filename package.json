@@ -1,0 +1,14 @@
+{
+  "name": "eslint-emfile-repro",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "for ((i=0; i<10000; i++)); do touch src/file-$(printf \"%04d\" $i).js; done",
+    "lint": "eslint src"
+  },
+  "keywords": [],
+  "devDependencies": {
+    "eslint": "^8.42.0"
+  }
+}
